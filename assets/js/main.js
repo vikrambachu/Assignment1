@@ -1,6 +1,26 @@
 
 
 (function($) {
+    var app = angular.module('app', ["ui.router"])
+    app.config(function($stateProvider, $urlRouterProvider){
+
+      $urlRouterProvider.otherwise("/features")
+
+      $stateProvider
+        .state('features', {
+            url: "/features",
+            templateUrl: "partials/features.html"
+        })
+        .state('expandableMemory', {
+            url: "/expandable-memory",
+            templateUrl: "partials/expandable-memory.html"
+        })
+        .state('waterResistant', {
+            url: "/water-resistant",
+            templateUrl: "partials/water-resistant.html"
+        })
+    });
+
 
 	$(function() {
 

@@ -1,10 +1,14 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="app">
 	<head>
 		<title>ISEM 551</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/angular-ui-router.min.js"></script>
+        <script src="assets/js/main.js"></script>
 	</head>
 	<body class="landing">
 			<header id="header" class="alt">
@@ -20,33 +24,8 @@
 					<li><a href="#" class="button big special">Learn More</a></li>
 				</ul>
 			</section>
-			<section id="one" class="wrapper style1">
-				<div class="inner">
-					<article class="feature left">
-						<span class="image"><img src="images/water.jpg" alt="" /></span>
-						<div class="content">
-							<h2>Water-resistant</h2>
-							<p>You can’t live without water or your smartphone, which is why the Galaxy S7 has a certified water-resistant rating. It repels spills, splashes and even dunks1 without a bulky protective case.</p>
-							<ul class="actions">
-								<li>
-									<a href="#" class="button alt">More</a>
-								</li>
-							</ul>
-						</div>
-					</article>
-					<article class="feature right">
-						<span class="image"><img src="images/tablet.jpg" alt="" /></span>
-						<div class="content">
-							<h2>Expandable memory</h2>
-							<p>Running out of memory shouldn’t be a thing. So if 32GB2 isn’t already enough, you can add an additional 200GB with a microSD card.3 No clouds, no hard drives.</p>
-							<ul class="actions">
-								<li>
-									<a href="#" class="button alt">More</a>
-								</li>
-							</ul>
-						</div>
-					</article>
-				</div>
+			<section id="one" class="wrapper style1" ui-view>
+
 			</section>
 			<section id="two" class="wrapper special">
 				<div class="inner">
@@ -125,8 +104,7 @@
 				</div>
 			</footer>
 
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/main.js"></script>
+
 
 	</body>
 </html>
